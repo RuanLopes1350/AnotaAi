@@ -5,11 +5,11 @@ class User {
     constructor() {
         const userSchema = new mongoose.Schema(
             {
-                nome: {
+                name: {
                     type: String,
                     required: true
                 },
-                apelido: {
+                nickname: {
                     type: String,
                     required: true,
                     unique: true
@@ -20,14 +20,14 @@ class User {
                     unique: true,
                     
                 },
-                senha: {
+                password: {
                     type: String,
                     required: true,
                     select: false
                 },
             },
             {
-                timestamps: { createdAt: 'data_criacao', updatedAt: 'data_ultima_atualizacao' },
+                timestamps: { createdAt: 'createdAt', updatedAt: 'updatedAt' },
                 versionKey: false
             }
         );
