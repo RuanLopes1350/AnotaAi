@@ -5,11 +5,11 @@ class User {
     constructor() {
         const userSchema = new mongoose.Schema(
             {
-                name: {
+                nome: {
                     type: String,
                     required: true
                 },
-                nickname: {
+                apelido: {
                     type: String,
                     required: true,
                     unique: true
@@ -20,17 +20,30 @@ class User {
                     unique: true,
                     
                 },
-                password: {
+                senha: {
                     type: String,
                     required: true,
                     select: false
                 },
+                respostaSeguranca: {
+                    type: String,
+                    required: true,
+                    select: false
+                },
+                status: {
+                    type: String,
+                    required: true,
+                    enum: ['Ativo', 'Inativo', 'Banido']
+                }
             },
             {
-                timestamps: { createdAt: 'createdAt', updatedAt: 'updatedAt' },
+                timestamps: { createdAt: 'data_criacao', updatedAt: 'data_ultimo_login' },
                 versionKey: false
             }
-        );
+        )
+
+        userSchema.index({data_criacao: -1});
+        userSchema.index({data_ultimo_login: -1})
         
         userSchema.plugin(mongoosePaginate);
         this.model = mongoose.model('usuario', userSchema);

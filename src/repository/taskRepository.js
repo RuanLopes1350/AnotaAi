@@ -1,4 +1,3 @@
-import mongoose from "mongoose";
 import Task from "../models/taskModel.js";
 import Logger from '../utils/helpers/logger.js';
 

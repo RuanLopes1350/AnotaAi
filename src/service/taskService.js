@@ -65,7 +65,7 @@ class TaskService {
                     name: 'ValidationError',
                     message: 'ID inválido',
                     status: 400,
-                    details: 'O ID fornecido não é um ObjectId válido do Mongoose'
+                    details: 'O ID fornecido não é um ObjectId válido do MongoDB'
                 };
             }
 
@@ -305,7 +305,7 @@ class TaskService {
                     name: 'ValidationError',
                     message: 'ID inválido',
                     status: 400,
-                    details: 'O ID fornecido não é um ObjectId válido do Mongoose.'
+                    details: 'O ID fornecido não é um ObjectId válido do Mongo.'
                 };
             }
 
