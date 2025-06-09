@@ -1,0 +1,12 @@
+05/06/2025 14:30:22 [INFO]: [zjs0in7yjpdmudv535raqg] Iniciando conexão-db: Conectando ao banco de dados
+{
+  "servico": "api-todo-list",
+  "idRequisicao": "zjs0in7yjpdmudv535raqg",
+  "operacao": "conexão-db"
+}
+05/06/2025 14:30:23 [INFO]: [zjs0in7yjpdmudv535raqg] Finalizando conexão-db: Conexão estabelecida com sucesso
+{
+  "servico": "api-todo-list",
+  "idRequisicao": "zjs0in7yjpdmudv535raqg",
+  "operacao": "conexão-db"
+}
